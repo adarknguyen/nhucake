@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Liên hệ Nhu Cake | Nhu Cake Contact</title>
+<meta name="description" content="Liên hệ Nhu Cake để đặt bánh theo yêu cầu, gửi góp ý hoặc giải đáp thắc mắc."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#ffccdd","primary-dark":"#f8a3bc","accent-pink":"#a14563","background-light":"#f8f5f6","background-dark":"#230f16"},fontFamily:{"display":["Be Vietnam Pro","sans-serif"]},borderRadius:{"DEFAULT":"0.75rem","lg":"1rem","xl":"1.5rem","full":"9999px"}}}}
+</script>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+
+<!-- COMPONENT: Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/20">
+<div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-10">
+  <div class="flex items-center justify-between h-16 md:h-20">
+    <!-- Mobile back -->
+    <div class="md:hidden flex size-10 items-center justify-center rounded-full hover:bg-primary/20 cursor-pointer"><a href="index.html"><span class="material-symbols-outlined">arrow_back</span></a></div>
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="hidden md:flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-slate-900"><span class="material-symbols-outlined text-2xl">cake</span></div>
+        <h2 class="text-lg md:text-xl font-bold tracking-tight"><span class="md:hidden">Liên hệ</span><span class="hidden md:inline">Nhu Cake</span></h2>
+      </a>
+    </div>
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-sm font-semibold hover:text-primary" href="index.html">Trang chủ</a>
+      <a class="text-sm font-semibold hover:text-primary" href="cake-listing.html">Bánh ngọt</a>
+      <a class="text-sm font-semibold text-accent-pink border-b-2 border-accent-pink pb-1" href="contact.html">Liên hệ</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="checkout.html" class="hidden lg:block rounded-full bg-primary px-6 py-2 text-sm font-bold text-slate-900 shadow-sm hover:opacity-90">Đặt ngay</a>
+      <div class="md:hidden w-10"></div>
+    </div>
+  </div>
+</div>
+</header>
+
+<main class="flex-grow pb-24 md:pb-0">
+  <!-- Mobile hero image -->
+  <div class="md:hidden px-4 py-4">
+    <div class="w-full h-48 rounded-xl bg-primary/20 bg-cover bg-center overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTK4DJrlsw-cdMR5Zbj28w62ya2DVKAyom-xVFjYKKVZRPn_b07uoGyKqYgPSXWjMmn8pZvA0m6bqR_4_FRP3i9scqEI4xIpIVh3UhebyUtGev1lVNh4QMb1bENBClLF4JcuCUbLKyoWa3ERlagv-H8e7EGdS8jQI_cpKwnuQPQKMeXe4zD4P8eJawa-43_G7ORDeh1g5cEEX9lVQ_W5I8w0yOPkgxxHqJ-STiUlrwSsfTijwgWkqJ257HyQvw6PIoRlLcnaV-Iodq')"></div>
+  </div>
+
+  <!-- Title -->
+  <section class="mx-auto max-w-7xl px-4 md:px-6 lg:px-10 py-4 md:py-12 text-center md:text-left">
+    <div class="max-w-3xl">
+      <h1 class="text-2xl md:text-4xl lg:text-6xl font-black leading-tight tracking-tight">
+        <span class="md:hidden">Chúng tôi luôn sẵn sàng lắng nghe bạn</span>
+        <span class="hidden md:inline">Liên hệ với <span class="text-primary">Nhu Cake</span></span>
+      </h1>
+      <p class="mt-2 md:mt-4 text-sm md:text-lg text-slate-600 italic md:not-italic">
+        <span class="md:hidden">Hãy kết nối với Nhu Cake Studio</span>
+        <span class="hidden md:inline">Chúng tôi rất mong nhận được phản hồi từ bạn. Liên hệ ngay với Nhu Cake để đặt bánh theo yêu cầu, gửi góp ý hoặc giải đáp thắc mắc.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Map Card (mobile) -->
+  <div class="md:hidden px-4 mb-6">
+    <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-primary/10">
+      <div class="h-40 w-full bg-slate-200 relative">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCzjQAAr99RaKmMfWSiRgwrtHTqeeQyRIzX-kUToayKxiNnsdVrXzpwI4MRlN_unsixTKa9h2DFL8u1L0s3I5SBjYj4VmywA5tz_XAWCXJb9oKYJ7iV1ULw6Hk4nJKvDz4hdEiycV621O-tvguxXDCa2CuwEoNrPXlVu_INgraz3UtDiD8PwFBkTv_vBhzd3Um0iC1f8O7r9MkHjqvSNswgGz7enfS4m3mXUuPaD5rH10ctxgxiNPh-lFFIcSE5ZaLzKwAZdjMq4HM4')"></div>
+        <div class="absolute inset-0 flex items-center justify-center"><div class="bg-primary text-slate-900 px-3 py-1 rounded-full shadow-lg font-bold text-xs flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Nhu Cake Studio</div></div>
+      </div>
+      <div class="p-4"><p class="font-bold text-sm">123 Đường Nguyễn Huệ, Quận 1</p><p class="text-xs text-slate-500">Thành phố Hồ Chí Minh, Việt Nam</p></div>
+    </div>
+  </div>
+
+  <!-- Contact Cards -->
+  <!-- Desktop: 5-col grid -->
+  <section class="hidden md:block mx-auto max-w-7xl px-6 py-8 lg:px-10">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+      <div class="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm"><div class="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/30 text-slate-800"><span class="material-symbols-outlined text-3xl">location_on</span></div><h3 class="font-bold">Địa chỉ</h3><p class="text-sm text-slate-500">123 Đường Baker, Quận 1, TP.HCM</p></div>
+      <div class="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm border-2 border-primary/20"><div class="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-slate-800"><span class="material-symbols-outlined text-3xl">call</span></div><h3 class="font-bold">Hotline</h3><p class="text-sm font-semibold">+84 123 456 789</p></div>
+      <div class="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm"><div class="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/30 text-slate-800"><span class="material-symbols-outlined text-3xl">chat_bubble</span></div><h3 class="font-bold">Zalo</h3><p class="text-sm text-slate-500">Quét mã để chat</p></div>
+      <div class="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm"><div class="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/30 text-slate-800"><span class="material-symbols-outlined text-3xl">send</span></div><h3 class="font-bold">Messenger</h3><p class="text-sm text-slate-500">m.me/nhucake</p></div>
+      <div class="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm"><div class="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/30 text-slate-800"><span class="material-symbols-outlined text-3xl">mail</span></div><h3 class="font-bold">Email</h3><p class="text-sm text-slate-500">hello@nhucake.com</p></div>
+    </div>
+  </section>
+
+  <!-- Mobile: stacked contact cards -->
+  <div class="md:hidden px-4 space-y-4 mb-8">
+    <div class="flex items-center justify-between bg-white p-4 rounded-xl border border-primary/10 shadow-sm">
+      <div class="flex items-center gap-4"><div class="bg-primary/20 p-3 rounded-lg text-primary"><span class="material-symbols-outlined">call</span></div><div><p class="text-xs font-bold text-slate-400 uppercase">Gọi ngay</p><p class="text-lg font-bold">0123 456 789</p></div></div>
+      <a class="bg-primary text-slate-900 px-6 py-3 rounded-lg font-bold text-sm shadow-md active:scale-95" href="tel:+84123456789">Gọi</a>
+    </div>
+    <div class="flex items-center justify-between bg-white p-4 rounded-xl border border-primary/10 shadow-sm">
+      <div class="flex items-center gap-4"><div class="bg-primary/20 p-3 rounded-lg text-primary"><span class="material-symbols-outlined">chat_bubble</span></div><div><p class="text-xs font-bold text-slate-400 uppercase">Zalo / WhatsApp</p><p class="text-lg font-bold">Trò chuyện trực tiếp</p></div></div>
+      <button class="bg-primary/30 text-slate-900 px-6 py-3 rounded-lg font-bold text-sm shadow-sm active:scale-95">Nhắn tin</button>
+    </div>
+  </div>
+
+  <!-- Map + Contact Form (desktop side-by-side) -->
+  <section class="mx-auto max-w-7xl px-4 md:px-6 py-4 md:py-12 lg:px-10">
+    <div class="grid grid-cols-1 gap-8 md:gap-12 lg:grid-cols-2">
+      <!-- Contact Form -->
+      <div class="rounded-xl bg-white p-6 md:p-8 shadow-sm">
+        <h2 class="mb-4 md:mb-6 text-lg md:text-2xl font-bold">
+          <span class="md:hidden">Gửi yêu cầu tư vấn</span>
+          <span class="hidden md:inline">Gửi tin nhắn cho chúng tôi</span>
+        </h2>
+        <form class="space-y-4">
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div class="flex flex-col gap-1.5"><label class="text-xs md:text-sm font-medium">Họ và tên</label><input class="rounded-lg border-slate-200 bg-background-light focus:border-primary focus:ring-primary" placeholder="Nhập tên của bạn" type="text"/></div>
+            <div class="flex flex-col gap-1.5"><label class="text-xs md:text-sm font-medium">Số điện thoại</label><input class="rounded-lg border-slate-200 bg-background-light focus:border-primary focus:ring-primary" placeholder="090..." type="tel"/></div>
+          </div>
+          <div class="hidden md:flex flex-col gap-1.5"><label class="text-sm font-medium">Email</label><input class="rounded-lg border-slate-200 bg-background-light focus:border-primary focus:ring-primary" placeholder="email@vi-du.com" type="email"/></div>
+          <div class="flex flex-col gap-1.5"><label class="text-xs md:text-sm font-medium">Lời nhắn</label><textarea class="rounded-lg border-slate-200 bg-background-light focus:border-primary focus:ring-primary" placeholder="Chúng tôi có thể giúp gì cho bạn?" rows="3"></textarea></div>
+          <button class="w-full rounded-xl bg-primary py-3 font-bold text-slate-900 hover:opacity-90 shadow-sm md:bg-primary" type="submit">Gửi lời nhắn</button>
+        </form>
+      </div>
+      <!-- Map (desktop) -->
+      <div class="hidden md:flex flex-col">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold">Vị trí cửa hàng</h2>
+          <span class="text-sm text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-base">directions_walk</span> Cách Bến Thành 10 phút đi bộ</span>
+        </div>
+        <div class="h-[400px] w-full overflow-hidden rounded-xl bg-slate-200 relative">
+          <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBetjjq_SPgqv2yUiz-JLGSxV2IBHaAFioA4pJf8p-KzoYaxV2qSe4_5i4pABEJYPNtVp58l5R313bt6pYI_2AKreXQfj39_HKRFWTqvYUA02QACqAm5RrfY1aGxJPD8ynQw9gH8QyoEhUpUruLkiHgWsPb-YPWR_bhSfZE_04bLdlxBcOWvlE3iUvMagffJq5ccs0L6xDlLnItgnMqDYvjRAeWfRNj9nVYzUd3VE3VMR-q9pvVF9jomzVgT4LCn-2CAmOOOd8CrJWY')"></div>
+          <div class="absolute inset-0 flex items-center justify-center"><div class="relative"><div class="absolute -top-12 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-slate-900 px-3 py-1 text-xs font-bold text-white shadow-xl">Nhu Cake ở đây nè!<div class="absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 bg-slate-900"></div></div><span class="material-symbols-outlined text-5xl text-red-500 drop-shadow-lg">location_on</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile footer info -->
+  <div class="md:hidden px-4 text-center mt-4">
+    <p class="text-xs text-slate-400">Mở cửa hàng ngày: 09:00 - 21:00</p>
+    <p class="text-[10px] text-slate-400 mt-2">© 2024 Nhu Cake Studio. Bảo lưu mọi quyền.</p>
+  </div>
+</main>
+
+<!-- COMPONENT: Footer (desktop) -->
+<footer class="hidden md:block mt-12 border-t border-primary/20 bg-white">
+<div class="mx-auto max-w-7xl px-6 py-12 lg:px-10">
+  <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
+    <div class="col-span-1 md:col-span-2">
+      <div class="flex items-center gap-3 mb-6"><div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-slate-900"><span class="material-symbols-outlined text-xl">cake</span></div><h2 class="text-lg font-bold">Nhu Cake</h2></div>
+      <p class="max-w-sm text-slate-500">Những chiếc bánh thủ công được làm bằng tình yêu và nguyên liệu cao cấp. Mang đến vị ngọt cho TP. Hồ Chí Minh từ năm 2015.</p>
+    </div>
+    <div><h4 class="mb-6 font-bold uppercase tracking-widest text-xs text-slate-400">Liên kết nhanh</h4><ul class="space-y-3 text-sm"><li><a class="hover:text-primary" href="index.html">Trang chủ</a></li><li><a class="hover:text-primary" href="cake-listing.html">Thực đơn</a></li><li><a class="hover:text-primary" href="checkout.html">Đặt hàng</a></li></ul></div>
+    <div><h4 class="mb-6 font-bold uppercase tracking-widest text-xs text-slate-400">Giờ mở cửa</h4><ul class="space-y-3 text-sm"><li class="flex justify-between"><span>Thứ 2 - Thứ 6:</span><span>8:00 - 21:00</span></li><li class="flex justify-between font-semibold text-primary"><span>Thứ 7 - CN:</span><span>9:00 - 22:00</span></li><li class="text-xs text-slate-400 mt-4 italic">* Giao hàng 24/7 khi đặt trước</li></ul></div>
+  </div>
+  <div class="mt-12 border-t border-primary/10 pt-8 text-center text-xs text-slate-400">© 2024 Nhu Cake Co. Ltd. Bảo lưu mọi quyền.</div>
+</div>
+</footer>
+
+<!-- Mobile floating bottom bar -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-light via-background-light to-transparent z-50">
+<div class="max-w-md mx-auto flex gap-3">
+  <a href="checkout.html" class="flex-1 bg-primary text-slate-900 h-14 rounded-xl font-bold flex items-center justify-center gap-2 shadow-xl border border-white/20"><span class="material-symbols-outlined">shopping_cart</span><span>ĐẶT BÁNH NGAY</span></a>
+  <button class="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-lg border border-primary/20 text-primary"><span class="material-symbols-outlined fill-1">favorite</span></button>
+</div>
+</div>
+</body>
+</html>

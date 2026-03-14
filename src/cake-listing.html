@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nhu Cake - Những Mẫu Bánh Tuyệt Vời</title>
+<meta name="description" content="Khám phá bộ sưu tập bánh kem thủ công tuyệt vời tại Nhu Cake. Từ sinh nhật đến tiệc cưới."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: { "primary": "#ffccdd", "primary-dark": "#f8a3bc", "accent-pink": "#a14563", "background-light": "#f8f5f6", "background-dark": "#230f16" },
+      fontFamily: { "display": ["Be Vietnam Pro", "sans-serif"] },
+      borderRadius: { "DEFAULT": "0.75rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+    },
+  },
+}
+</script>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+
+<!-- COMPONENT: Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex items-center justify-between h-16 md:h-20">
+    <div class="flex items-center gap-2 md:gap-3">
+      <a href="index.html" class="flex items-center gap-2 md:gap-3">
+        <div class="w-8 h-8 md:w-10 md:h-10 bg-primary rounded-full flex items-center justify-center text-accent-pink"><span class="material-symbols-outlined text-2xl md:text-3xl">cake</span></div>
+        <span class="text-xl md:text-2xl font-black tracking-tight text-accent-pink">Nhu Cake</span>
+      </a>
+    </div>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-sm font-semibold hover:text-accent-pink transition-colors" href="index.html">Trang chủ</a>
+      <a class="text-sm font-semibold text-accent-pink border-b-2 border-accent-pink pb-1" href="cake-listing.html">Bánh kem</a>
+      <a class="text-sm font-semibold hover:text-accent-pink transition-colors" href="checkout.html">Đặt bánh</a>
+      <a class="text-sm font-semibold hover:text-accent-pink transition-colors" href="contact.html">Liên hệ</a>
+    </nav>
+    <div class="flex items-center gap-3 md:gap-4">
+      <!-- Desktop search -->
+      <div class="hidden sm:flex items-center bg-primary/10 rounded-xl px-3 py-1.5 border border-primary/20">
+        <span class="material-symbols-outlined text-slate-500 text-xl">search</span>
+        <input class="bg-transparent border-none focus:ring-0 text-sm w-40 placeholder:text-slate-400" placeholder="Tìm kiếm bánh..." type="text"/>
+      </div>
+      <button class="p-2 text-accent-pink relative"><span class="material-symbols-outlined">shopping_cart</span><span class="absolute top-0 right-0 bg-accent-pink text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span></button>
+      <button class="md:hidden p-2 rounded-full hover:bg-primary/20" id="mobileMenuBtn"><span class="material-symbols-outlined text-accent-pink">menu</span></button>
+    </div>
+  </div>
+</div>
+<!-- Mobile search (inside header) -->
+<div class="md:hidden px-4 pb-3">
+  <div class="relative flex items-center">
+    <span class="material-symbols-outlined absolute left-3 text-slate-400">search</span>
+    <input class="w-full pl-10 pr-4 py-2.5 bg-white border-none rounded-xl text-sm focus:ring-2 focus:ring-primary shadow-sm placeholder:text-slate-400" placeholder="Tìm kiếm bánh ngon..." type="text"/>
+  </div>
+</div>
+<!-- Mobile category pills -->
+<div class="md:hidden flex gap-2 px-4 pb-3 overflow-x-auto no-scrollbar">
+  <button class="shrink-0 px-5 py-1.5 rounded-xl bg-primary text-slate-900 text-sm font-semibold shadow-sm">Tất cả</button>
+  <button class="shrink-0 px-5 py-1.5 rounded-xl bg-white text-slate-600 text-sm font-medium border border-primary/10">Sinh nhật</button>
+  <button class="shrink-0 px-5 py-1.5 rounded-xl bg-white text-slate-600 text-sm font-medium border border-primary/10">Đám cưới</button>
+  <button class="shrink-0 px-5 py-1.5 rounded-xl bg-white text-slate-600 text-sm font-medium border border-primary/10">Cupcakes</button>
+  <button class="shrink-0 px-5 py-1.5 rounded-xl bg-white text-slate-600 text-sm font-medium border border-primary/10">Thuần chay</button>
+</div>
+<!-- Mobile menu overlay/panel -->
+<div class="mobile-menu-overlay fixed inset-0 bg-black/50 z-40 hidden" id="mobileMenuOverlay"></div>
+<div class="mobile-menu-panel fixed top-0 left-0 w-72 h-full bg-background-light z-50 shadow-2xl p-6" id="mobileMenuPanel">
+  <div class="flex justify-between items-center mb-8"><span class="text-xl font-black text-accent-pink">Nhu Cake</span><button id="mobileMenuClose"><span class="material-symbols-outlined">close</span></button></div>
+  <nav class="flex flex-col gap-4">
+    <a class="text-base font-semibold hover:text-accent-pink" href="index.html">Trang chủ</a>
+    <a class="text-base font-semibold text-accent-pink" href="cake-listing.html">Bánh kem</a>
+    <a class="text-base font-semibold hover:text-accent-pink" href="cake-detail.html">Chi tiết bánh</a>
+    <a class="text-base font-semibold hover:text-accent-pink" href="checkout.html">Đặt bánh</a>
+    <a class="text-base font-semibold hover:text-accent-pink" href="contact.html">Liên hệ</a>
+  </nav>
+</div>
+</header>
+
+<main class="flex-1 px-4 md:px-6 lg:px-40 py-4 md:py-8 pb-24 md:pb-8">
+  <!-- Breadcrumbs (desktop) -->
+  <nav class="hidden md:flex items-center gap-2 text-sm text-slate-500 mb-6">
+    <a class="hover:text-primary transition-colors" href="index.html">Trang chủ</a>
+    <span class="material-symbols-outlined text-xs">chevron_right</span>
+    <span class="text-slate-900 font-medium">Bánh Ngọt</span>
+  </nav>
+  <!-- Page Title (desktop) -->
+  <div class="hidden md:block mb-8">
+    <h1 class="text-4xl lg:text-5xl font-black mb-3">Những Mẫu Bánh Tuyệt Vời</h1>
+    <p class="text-slate-500 max-w-2xl">Được làm thủ công từ những nguyên liệu cao cấp nhất, mang đến hương vị ngọt ngào cho mọi dịp kỷ niệm.</p>
+  </div>
+  <!-- Desktop Tabs + Sort -->
+  <div class="hidden md:flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-primary/20 mb-8 overflow-x-auto">
+    <div class="flex gap-8">
+      <a class="pb-4 border-b-2 border-primary text-slate-900 font-bold whitespace-nowrap" href="#">Tất cả bánh</a>
+      <a class="pb-4 border-b-2 border-transparent hover:border-primary/50 text-slate-500 font-medium whitespace-nowrap" href="#">Sinh Nhật</a>
+      <a class="pb-4 border-b-2 border-transparent hover:border-primary/50 text-slate-500 font-medium whitespace-nowrap" href="#">Tiệc Cưới</a>
+      <a class="pb-4 border-b-2 border-transparent hover:border-primary/50 text-slate-500 font-medium whitespace-nowrap" href="#">Cupcakes</a>
+      <a class="pb-4 border-b-2 border-transparent hover:border-primary/50 text-slate-500 font-medium whitespace-nowrap" href="#">Mùa Lễ Hội</a>
+    </div>
+    <div class="flex items-center gap-2 text-sm text-slate-500">
+      <span class="material-symbols-outlined text-lg">sort</span>
+      <select class="bg-transparent border-none focus:ring-0 text-sm font-bold text-slate-900 cursor-pointer">
+        <option>Phổ biến nhất</option><option>Mới nhất</option><option>Giá: Thấp đến Cao</option><option>Giá: Cao đến Thấp</option>
+      </select>
+    </div>
+  </div>
+  <!-- Mobile sort -->
+  <div class="md:hidden flex items-center justify-between py-2 mb-2">
+    <span class="text-sm font-medium text-slate-500">24 sản phẩm</span>
+    <button class="flex items-center gap-1.5 text-sm font-semibold text-slate-800"><span class="material-symbols-outlined text-lg">swap_vert</span> Mới nhất</button>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <!-- Filters Sidebar (desktop only) -->
+    <aside class="hidden lg:block space-y-8 col-span-1">
+      <div>
+        <h3 class="font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">filter_list</span> Bộ lọc</h3>
+        <div class="space-y-6">
+          <div>
+            <p class="text-sm font-bold mb-3 uppercase tracking-wider text-slate-400">Khoảng giá</p>
+            <div class="space-y-2">
+              <label class="flex items-center gap-3 text-sm cursor-pointer"><input class="rounded border-primary/50 text-primary focus:ring-primary h-4 w-4" type="checkbox"/><span>Dưới 500.000₫</span></label>
+              <label class="flex items-center gap-3 text-sm cursor-pointer"><input class="rounded border-primary/50 text-primary focus:ring-primary h-4 w-4" type="checkbox"/><span>500.000₫ - 1.000.000₫</span></label>
+              <label class="flex items-center gap-3 text-sm cursor-pointer"><input checked class="rounded border-primary/50 text-primary focus:ring-primary h-4 w-4" type="checkbox"/><span>1.000.000₫ - 2.000.000₫</span></label>
+              <label class="flex items-center gap-3 text-sm cursor-pointer"><input class="rounded border-primary/50 text-primary focus:ring-primary h-4 w-4" type="checkbox"/><span>Trên 2.000.000₫</span></label>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-bold mb-3 uppercase tracking-wider text-slate-400">Kích thước</p>
+            <div class="grid grid-cols-3 gap-2">
+              <button class="py-2 px-1 text-xs font-bold border border-primary rounded hover:bg-primary transition-colors">15 cm</button>
+              <button class="py-2 px-1 text-xs font-bold bg-primary rounded">20 cm</button>
+              <button class="py-2 px-1 text-xs font-bold border border-primary rounded hover:bg-primary transition-colors">25 cm</button>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-bold mb-3 uppercase tracking-wider text-slate-400">Hương vị</p>
+            <div class="space-y-2">
+              <label class="flex items-center gap-3 text-sm cursor-pointer"><input class="rounded-full border-primary/50 text-primary focus:ring-primary h-4 w-4" name="flavor" type="radio"/><span>Socola Truffle</span></label>
+              <label class="flex items-center gap-3 text-sm cursor-pointer"><input class="rounded-full border-primary/50 text-primary focus:ring-primary h-4 w-4" name="flavor" type="radio"/><span>Red Velvet</span></label>
+              <label class="flex items-center gap-3 text-sm cursor-pointer"><input class="rounded-full border-primary/50 text-primary focus:ring-primary h-4 w-4" name="flavor" type="radio"/><span>Vanilla Pháp</span></label>
+              <label class="flex items-center gap-3 text-sm cursor-pointer"><input class="rounded-full border-primary/50 text-primary focus:ring-primary h-4 w-4" name="flavor" type="radio"/><span>Kem Dâu Tây</span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- COMPONENT: CakeGrid -->
+    <div class="col-span-1 lg:col-span-3">
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6">
+        <!-- Card 1 -->
+        <a href="cake-detail.html" class="group bg-white rounded-xl overflow-hidden border border-primary/10 shadow-sm hover:shadow-xl transition-all duration-300 block">
+          <div class="relative aspect-square md:h-64 md:aspect-auto overflow-hidden">
+            <div class="absolute top-2 left-2 z-10"><span class="bg-primary text-slate-900 text-[10px] font-black uppercase px-2 py-1 rounded-lg">Bán chạy</span></div>
+            <img alt="Double Dark Truffle" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDitp5Cs3U7ETQ9REYDhQjKESm5hqQX6A2fe8v9dHJh0ydneo3LAZf6wnK6bX3ZJ-eldMskvAdsmvW-H7ONUOoYnEPe6LTy1jBGeLaH-VfanU2JHKm6trvWmwi03szU1smH6urqdF-Fwlnme4yTyGBpnK-nFqZYFnn5arQrPvRK-Ebsh0zlznpY5J2sd8rCYtmw3YOrxTDvcQrwjoKAoaMzQjioIBcUce6Yf5rZaVGaADh-f3Qj54zLIyb2c1rPqLKifDb2Vs2BlCBz"/>
+          </div>
+          <div class="p-3 md:p-4">
+            <h3 class="font-bold text-sm md:text-lg mb-0 md:mb-1 truncate">Double Dark Truffle</h3>
+            <p class="hidden md:block text-xs text-slate-500 mb-3">Socola đậm đà với ganache</p>
+            <p class="text-accent-pink font-bold text-sm md:text-xl mt-1 md:mt-0 mb-2 md:mb-4">1.150.000₫</p>
+            <button class="w-full py-2 md:py-2.5 bg-primary text-slate-900 text-xs md:text-sm font-bold rounded-lg hover:bg-primary/80 transition-colors">Đặt ngay</button>
+          </div>
+        </a>
+        <!-- Card 2 -->
+        <a href="cake-detail.html" class="group bg-white rounded-xl overflow-hidden border border-primary/10 shadow-sm hover:shadow-xl transition-all duration-300 block">
+          <div class="relative aspect-square md:h-64 md:aspect-auto overflow-hidden">
+            <div class="absolute top-2 left-2 z-10"><span class="bg-pink-400 text-white text-[10px] font-black uppercase px-2 py-1 rounded-lg">Giới hạn</span></div>
+            <img alt="Strawberry Dream" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDugGiMLto8aFqlfRBND9gEr_BJ5z_YvDxHxc_GVc3ITCu8czsVtl4lix1p3idLh85elTCEnoTd_h2RHcn3HkGFMOoTSSA8jxhyVjwu998i4ilap4CFfkHHw_BDZj_Zy4MJELN-IztZg14AEa_UwVt5b4XarqIbTJH65X_9iy1JcOOhJ2OkPtTpC5XShf0A4GB2py_SU9TFkyG2h9Ksn42rZSbgf6bxEX919AyWDI4X7swxhoeINwFhPtHrTVfpogoB3HdYi6l_61JJ"/>
+          </div>
+          <div class="p-3 md:p-4">
+            <h3 class="font-bold text-sm md:text-lg mb-0 md:mb-1 truncate">Strawberry Dream</h3>
+            <p class="hidden md:block text-xs text-slate-500 mb-3">Dâu tươi &amp; Kem tươi</p>
+            <p class="text-accent-pink font-bold text-sm md:text-xl mt-1 md:mt-0 mb-2 md:mb-4">1.350.000₫</p>
+            <button class="w-full py-2 md:py-2.5 bg-primary text-slate-900 text-xs md:text-sm font-bold rounded-lg hover:bg-primary/80 transition-colors">Đặt ngay</button>
+          </div>
+        </a>
+        <!-- Card 3 -->
+        <a href="cake-detail.html" class="group bg-white rounded-xl overflow-hidden border border-primary/10 shadow-sm hover:shadow-xl transition-all duration-300 block">
+          <div class="relative aspect-square md:h-64 md:aspect-auto overflow-hidden">
+            <img alt="Classic Vanilla Bean" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFzCVzZx8zpPDp_ipZC9loRv8XHX1HtwWIRymQfxbhTrJ3t6YmXyY_VQPobmnKUIMaQlorD83aRFHS5cEaI3JJOXyaMAvWctQUT-YaIH60Y_lKeJ1ApWS_gmUvT-JqaNd9zXEKxnnfUyxr2mfb0Yks1B1f9n1Cn9C9QXJCOu0RzFRCPBviXlUroTwgV-s0ScErj5OpPRU_uY7zDpwIwua6XdhdsBdEg5fqYxtLLs54otfuWOHkkp-Hups0_ri26fG6BC3G7ZmKe1jv"/>
+          </div>
+          <div class="p-3 md:p-4">
+            <h3 class="font-bold text-sm md:text-lg mb-0 md:mb-1 truncate">Classic Vanilla Bean</h3>
+            <p class="hidden md:block text-xs text-slate-500 mb-3">Vanilla Madagascar thượng hạng</p>
+            <p class="text-accent-pink font-bold text-sm md:text-xl mt-1 md:mt-0 mb-2 md:mb-4">950.000₫</p>
+            <button class="w-full py-2 md:py-2.5 bg-primary text-slate-900 text-xs md:text-sm font-bold rounded-lg hover:bg-primary/80 transition-colors">Đặt ngay</button>
+          </div>
+        </a>
+        <!-- Card 4 -->
+        <a href="cake-detail.html" class="group bg-white rounded-xl overflow-hidden border border-primary/10 shadow-sm hover:shadow-xl transition-all duration-300 block">
+          <div class="relative aspect-square md:h-64 md:aspect-auto overflow-hidden">
+            <div class="absolute top-2 left-2 z-10"><span class="bg-primary text-slate-900 text-[10px] font-black uppercase px-2 py-1 rounded-lg">Mới</span></div>
+            <img alt="Matcha Zen Cake" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQN5nep1eC32whxK4O35sZ-qu4xZ2i2f9eK1tqEEscar4gYp1uGckFTNYM5w-Qd4kvApZmceHQg8ApEQ6U2BosJpjZqmQ3VQKNyb_nGHEUZKXFIld6OnADrWSahPk9Mf30GVgUei7zC6zKI7whRHrL4ln5ruRWEEyadYxEvhjYNAOajlAf8WEdXO_3kNlma_astYdFhEtbiQFpeG6lCHOKpnRSIkROw5huJz3b3c5z6_YrJKT2wxC9MNbxK1f5_0E6IySXskE2F_4m"/>
+          </div>
+          <div class="p-3 md:p-4">
+            <h3 class="font-bold text-sm md:text-lg mb-0 md:mb-1 truncate">Matcha Zen Cake</h3>
+            <p class="hidden md:block text-xs text-slate-500 mb-3">Cốt bánh Matcha Uji thượng hạng</p>
+            <p class="text-accent-pink font-bold text-sm md:text-xl mt-1 md:mt-0 mb-2 md:mb-4">1.250.000₫</p>
+            <button class="w-full py-2 md:py-2.5 bg-primary text-slate-900 text-xs md:text-sm font-bold rounded-lg hover:bg-primary/80 transition-colors">Đặt ngay</button>
+          </div>
+        </a>
+        <!-- Card 5 -->
+        <a href="cake-detail.html" class="group bg-white rounded-xl overflow-hidden border border-primary/10 shadow-sm hover:shadow-xl transition-all duration-300 block">
+          <div class="relative aspect-square md:h-64 md:aspect-auto overflow-hidden">
+            <img alt="Velvet Crimson" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMsCAqg0w4NrbWjKAoESD1_Es9mdLR5tAqJs8pCH4l2TjygHZjs1G16XUnF6eCQ70uCCb0EPsh6NwCmitZki_pPizgmfTLJc0L6jFDOGDXDoJRIQipmK-rSJuzdmTfy7ZPYeU8FWRD8di4NBYbBBwUCNjtlzIa1jZTnY0bwP-QhcF5YzLotTYyk4DdK2tTPO9Bv2jOZLnFEUwFykV1CGtcC6aF2qlqzp6EkdmDdjSzLILswEAUR7lw7dj8T8iZKYHKC3tqL-YFU0qt"/>
+          </div>
+          <div class="p-3 md:p-4">
+            <h3 class="font-bold text-sm md:text-lg mb-0 md:mb-1 truncate">Velvet Crimson</h3>
+            <p class="hidden md:block text-xs text-slate-500 mb-3">Red velvet truyền thống</p>
+            <p class="text-accent-pink font-bold text-sm md:text-xl mt-1 md:mt-0 mb-2 md:mb-4">1.050.000₫</p>
+            <button class="w-full py-2 md:py-2.5 bg-primary text-slate-900 text-xs md:text-sm font-bold rounded-lg hover:bg-primary/80 transition-colors">Đặt ngay</button>
+          </div>
+        </a>
+        <!-- Card 6 -->
+        <a href="cake-detail.html" class="group bg-white rounded-xl overflow-hidden border border-primary/10 shadow-sm hover:shadow-xl transition-all duration-300 block">
+          <div class="relative aspect-square md:h-64 md:aspect-auto overflow-hidden">
+            <img alt="Blueberry Zest" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoC1thOCsrPZ345rf2Dz9CXSUqi-7A2Dix-1O1tIrhxgGqtR_9todfZ6HkATHVKCZ5ypt8fzvdyudWLRQGVFKUvHyW168rAZIREptgD3BYrcVdF0yelTw1Bkw1Sbx3AjkN8JbGVDY5UDsvX9ulc3gDGfsDsZEjPIinjWx19g4GrX-nscqT0Lhdff8pU-ohEVR6TfFDA378Te2AODnnIyKFO2blkKgvEeO6ZpcViFmUFyE8dXYFXnl9PwxjkFipK6XcQc0O_xggzdLb"/>
+          </div>
+          <div class="p-3 md:p-4">
+            <h3 class="font-bold text-sm md:text-lg mb-0 md:mb-1 truncate">Blueberry Zest</h3>
+            <p class="hidden md:block text-xs text-slate-500 mb-3">Chanh tươi &amp; Việt quất</p>
+            <p class="text-accent-pink font-bold text-sm md:text-xl mt-1 md:mt-0 mb-2 md:mb-4">1.180.000₫</p>
+            <button class="w-full py-2 md:py-2.5 bg-primary text-slate-900 text-xs md:text-sm font-bold rounded-lg hover:bg-primary/80 transition-colors">Đặt ngay</button>
+          </div>
+        </a>
+      </div>
+      <!-- Pagination (desktop) -->
+      <div class="hidden md:flex justify-center mt-12 gap-2">
+        <button class="size-10 flex items-center justify-center rounded-lg border border-primary/20 hover:bg-primary/20"><span class="material-symbols-outlined">chevron_left</span></button>
+        <button class="size-10 flex items-center justify-center rounded-lg bg-primary text-slate-900 font-bold">1</button>
+        <button class="size-10 flex items-center justify-center rounded-lg border border-primary/20 hover:bg-primary/20">2</button>
+        <button class="size-10 flex items-center justify-center rounded-lg border border-primary/20 hover:bg-primary/20">3</button>
+        <button class="size-10 flex items-center justify-center rounded-lg border border-primary/20 hover:bg-primary/20"><span class="material-symbols-outlined">chevron_right</span></button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- COMPONENT: Footer -->
+<footer class="hidden md:block bg-white border-t border-primary/20 py-12 px-6 lg:px-40">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+  <div>
+    <div class="flex items-center gap-3 mb-6"><div class="size-8 bg-primary rounded-lg flex items-center justify-center text-slate-900"><span class="material-symbols-outlined">bakery_dining</span></div><h2 class="text-xl font-black leading-tight tracking-tight">Nhu Cake</h2></div>
+    <p class="text-slate-500 text-sm leading-relaxed mb-6">Nướng bánh tươi mỗi ngày. Mang niềm vui đến mọi buổi tiệc từ năm 2010.</p>
+  </div>
+  <div><h4 class="font-bold mb-6">Liên kết nhanh</h4><ul class="space-y-4 text-sm text-slate-500"><li><a class="hover:text-primary" href="index.html">Trang chủ</a></li><li><a class="hover:text-primary" href="cake-listing.html">Bộ sưu tập</a></li><li><a class="hover:text-primary" href="checkout.html">Đặt hàng</a></li></ul></div>
+  <div><h4 class="font-bold mb-6">Hỗ trợ</h4><ul class="space-y-4 text-sm text-slate-500"><li><a class="hover:text-primary" href="contact.html">Liên hệ</a></li><li><a class="hover:text-primary" href="#">Chính sách bảo mật</a></li></ul></div>
+  <div><h4 class="font-bold mb-6">Đăng ký nhận tin</h4><p class="text-sm text-slate-500 mb-4">Ưu đãi ngọt ngào mỗi tuần.</p><div class="flex"><input class="flex-1 rounded-l-lg border-primary/30 focus:ring-primary text-sm" placeholder="Email" type="email"/><button class="bg-primary px-4 py-2 rounded-r-lg font-bold text-sm text-slate-900">Tham gia</button></div></div>
+</div>
+<div class="pt-8 border-t border-primary/10 text-center text-slate-400 text-xs">© 2024 Nhu Cake Bakery. Bảo lưu mọi quyền.</div>
+</footer>
+
+<!-- COMPONENT: FloatingContactButtons (mobile) -->
+<div class="md:hidden fixed bottom-24 right-4 flex flex-col gap-3 z-40">
+  <button class="size-12 rounded-xl bg-[#25D366] text-white flex items-center justify-center shadow-lg"><span class="material-symbols-outlined">chat</span></button>
+  <button class="size-12 rounded-xl bg-accent-pink text-white flex items-center justify-center shadow-lg"><span class="material-symbols-outlined">call</span></button>
+</div>
+
+<!-- COMPONENT: BottomNavBar (mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-primary/20 px-6 py-2 flex items-center justify-between z-50">
+  <a class="flex flex-col items-center gap-1 text-slate-400" href="index.html"><span class="material-symbols-outlined">home</span><span class="text-[10px] font-medium">Trang chủ</span></a>
+  <a class="flex flex-col items-center gap-1 text-accent-pink" href="cake-listing.html"><span class="material-symbols-outlined fill-1">cake</span><span class="text-[10px] font-bold">Sản phẩm</span></a>
+  <a class="flex flex-col items-center gap-1 text-slate-400" href="checkout.html"><span class="material-symbols-outlined">shopping_bag</span><span class="text-[10px] font-medium">Đơn hàng</span></a>
+  <a class="flex flex-col items-center gap-1 text-slate-400" href="contact.html"><span class="material-symbols-outlined">person</span><span class="text-[10px] font-medium">Cá nhân</span></a>
+</nav>
+
+<script>
+const menuBtn = document.getElementById('mobileMenuBtn');
+const overlay = document.getElementById('mobileMenuOverlay');
+const panel = document.getElementById('mobileMenuPanel');
+const closeBtn = document.getElementById('mobileMenuClose');
+function openMenu() { overlay.classList.remove('hidden'); panel.classList.add('open'); }
+function closeMenu() { overlay.classList.add('hidden'); panel.classList.remove('open'); }
+menuBtn.addEventListener('click', openMenu);
+overlay.addEventListener('click', closeMenu);
+closeBtn.addEventListener('click', closeMenu);
+</script>
+</body>
+</html>

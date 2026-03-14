@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nhu Cake - Chi Tiết Bánh Chiffon Dâu Tây</title>
+<meta name="description" content="Bánh Chiffon Dâu Tây - Mềm mịn, tan ngay trong miệng với hương vị dâu tây tự nhiên và kem tươi vani Tahitian."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#ffccdd","primary-dark":"#f8a3bc","accent-pink":"#a14563","background-light":"#f8f5f6","background-dark":"#230f16"},fontFamily:{"display":["Be Vietnam Pro","sans-serif"]},borderRadius:{"DEFAULT":"0.75rem","lg":"1rem","xl":"1.5rem","full":"9999px"}}}}
+</script>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+
+<!-- COMPONENT: Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex items-center justify-between h-16 md:h-20">
+    <!-- Mobile: back + logo -->
+    <div class="flex items-center gap-2">
+      <a href="cake-listing.html" class="md:hidden flex size-10 items-center justify-center rounded-full bg-white shadow-sm"><span class="material-symbols-outlined">arrow_back</span></a>
+      <a href="index.html" class="flex items-center gap-2"><div class="hidden md:flex w-10 h-10 bg-primary rounded-full items-center justify-center text-accent-pink"><span class="material-symbols-outlined text-3xl">cake</span></div><span class="text-lg md:text-2xl font-black tracking-tight text-accent-pink">Nhu Cake</span></a>
+    </div>
+    <nav class="hidden md:flex items-center gap-6">
+      <a class="text-sm font-medium hover:text-primary" href="index.html">Trang chủ</a>
+      <a class="text-sm font-medium hover:text-primary" href="cake-listing.html">Các loại bánh</a>
+      <a class="text-sm font-medium hover:text-primary" href="contact.html">Liên hệ</a>
+    </nav>
+    <div class="flex items-center gap-2 md:gap-4">
+      <div class="relative hidden sm:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span><input class="pl-10 pr-4 py-2 bg-primary/10 border-none rounded-full text-sm focus:ring-2 focus:ring-primary w-64" placeholder="Tìm kiếm bánh..." type="text"/></div>
+      <button class="p-2 rounded-full hover:bg-primary/20"><span class="material-symbols-outlined">shopping_cart</span></button>
+      <button class="md:hidden flex size-10 items-center justify-center rounded-full bg-white shadow-sm text-pink-500"><span class="material-symbols-outlined fill-1">favorite</span></button>
+    </div>
+  </div>
+</div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-8 pb-32 md:pb-8">
+  <!-- Breadcrumbs (desktop) -->
+  <nav class="hidden md:flex items-center gap-2 text-sm text-slate-500 mb-8">
+    <a class="hover:text-primary" href="index.html">Trang chủ</a><span class="material-symbols-outlined text-xs">chevron_right</span>
+    <a class="hover:text-primary" href="cake-listing.html">Bánh Signature</a><span class="material-symbols-outlined text-xs">chevron_right</span>
+    <span class="text-slate-900 font-medium">Bánh Chiffon Dâu Tây</span>
+  </nav>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12">
+    <!-- COMPONENT: ProductGallery -->
+    <div class="lg:col-span-7">
+      <!-- Mobile: single image with dots -->
+      <div class="md:hidden relative">
+        <div class="aspect-square w-full rounded-xl overflow-hidden bg-primary/20 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2AQAygKwbp1o2PNmxAQ6e_fuZ5Tx6PRAjRG_mbkSt67PfeP2yhfOVSx4iO9hQkzmFVAvPg8bLcGItGd2w8Dxtz6A5EHu16HfAwDTFV0a2B8mz2yf4HVhrmQiX8goFYtmU5lOFgywYozHA7g5Gusb9hN8DnolK1YBy_CdFhkU2kiOd-OhX4R5mQkJuAuZaJyWGvcOe3rMhiX374hfxpd8uLNnsb3LkF4d-xQORL30Avr33HATAYwgFyJMavNdOi2DWn_V_1cdKnb_x')"></div>
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 bg-black/20 backdrop-blur-sm px-3 py-1.5 rounded-full"><div class="size-2 rounded-full bg-white"></div><div class="size-2 rounded-full bg-white/40"></div><div class="size-2 rounded-full bg-white/40"></div><div class="size-2 rounded-full bg-white/40"></div></div>
+      </div>
+      <!-- Desktop: main + thumbnails -->
+      <div class="hidden md:grid grid-cols-1 gap-4">
+        <div class="aspect-square rounded-xl overflow-hidden bg-primary/10"><img class="w-full h-full object-cover" alt="Bánh chiffon dâu tây" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT0ZMm9yYj2lCEMhk2PrBebTKzohIVCA921AVcFzoPUSx4VtGhSqy3VP0LBsBljlRj_FHKMjg9m5mquKfeML1A4iaXwwrC161cldSZss3DwBZ3KO_tDcErvgeT341G3EAZ9IKdBu2J2cz1vnAGPqPYF_qje6ogaQmF3DvimBty9RzX8oGfq8zKW4IztfUTbCOhyG7amocdY6OF8_xU8b9wnfOCSENr4QK-xCQPF6A2vR-wFfFY4bLCHO8ZCdzIxfPqng3sd8jshNAW"/></div>
+        <div class="grid grid-cols-4 gap-4">
+          <div class="aspect-square rounded-lg overflow-hidden border-2 border-primary cursor-pointer"><img class="w-full h-full object-cover" alt="Thumbnail 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs5NOMLWWJVTJqLl9BgCk5kH7XyYxPSjJn7B74Y9W05cxsHLhu-X63HVTozVeEOdEAibCyo56aMCfPRI7aFeYc9EQjySqHdPExNMLExmRyJXUaTYcKVNxpoD9kpzBP3gWJm-nui-TbQxiN3QgRaG7Ts9PD4qQ_1FClRxx8PFtRsOFIJRLLJ9qd5KhzjQwAOLKLyqrp2CPqiU1MDmboLh0_RhW9DzmrTtGuv3gQhfRIx4hDXxQIENKEXuJInjJy0CDHUpIVbHPpXRAF"/></div>
+          <div class="aspect-square rounded-lg overflow-hidden border border-transparent hover:border-primary cursor-pointer"><img class="w-full h-full object-cover" alt="Thumbnail 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0RwubVRrvf3NqBQKHYbarL6ZkePL1hwpSlGo2GN7zQLfdsxR2bS6HcMs-_K407sQKncSCRYNA9-WRoetzG5FEnw1CWFRdCrsNToCC4wpGv2AVE63uMvNfsq9-QtCFvJDlctScluAsUFtO3qWuMWhdNB4qAXpkDNw87ZSZ7PgVZ7b3c_-VTGG8apfQdM51Yd360-AThYFQaXNYPHdM7cEwLQk2Sz33cn4YB3Jem2IBq1umnU4kf3RrP4b0CTYtkh8Ju3YTV1Y6XNTN"/></div>
+          <div class="aspect-square rounded-lg overflow-hidden border border-transparent hover:border-primary cursor-pointer"><img class="w-full h-full object-cover" alt="Thumbnail 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjEbkZ3fjZEULIVJzxO7KUpo1ZhToiTFGHzb-SGsJFTd58hzWxVM07-AZt99_RP1oQBeQ91aA1a_St6fS9miygT8FmiHgVz1eV3qL5y5X4qA-S9vYFoh2THoSOhAVNqzYppfy-qBhb6HItPLBiCTZXy5jcvKczlu7oaV1Cef4FFUNnG35OPE0cxfgAq_L456LAxjr8MUFCx9fMOHb8kZKpojTQPPF_srSh-uBhvUkk0_TnLMZZdA92muMRzKs4U4DxUX5f8iSLoDSd"/></div>
+          <div class="aspect-square rounded-lg overflow-hidden border border-transparent hover:border-primary cursor-pointer"><img class="w-full h-full object-cover" alt="Thumbnail 4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWMluftxSHShs20N94xYiOBxHbwKNd2TvcTEilmvPFMvgmUWOSdPDvW5NbhYzIzENj0uLVzs1_jD83Jt94Qj3SFBEFAkADlVuAsX0OcutUacxHVtpLdnIFfIUMzeo66PjlrWmTkMF0gsHTvTwSRtaouxI5ncAFUykBy_bkiLzRnMbqhZGmz0a0exP-e0FpIg8-3yR7eRaqn1WyJx_CIUy238LaBBxajb6-9Yg8IZyC8qr-W2o7sL0N0N1M2S3b3afdUW70UJ4CtDYe"/></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Info -->
+    <div class="lg:col-span-5 space-y-6 md:space-y-8">
+      <div>
+        <!-- Mobile title/price -->
+        <div class="md:hidden flex justify-between items-start">
+          <div class="space-y-1"><h1 class="text-2xl font-bold">Bánh Kem Dâu Tây</h1><p class="text-slate-500 text-sm">Dâu tây tươi &amp; kem sữa cao cấp</p></div>
+          <div class="text-right"><p class="text-2xl font-bold text-pink-600">450.000₫</p><p class="text-xs text-slate-400 line-through">520.000₫</p></div>
+        </div>
+        <!-- Desktop title/price -->
+        <div class="hidden md:block">
+          <h1 class="text-4xl font-extrabold mb-1">Bánh Chiffon Dâu Tây</h1>
+          <p class="text-xl text-primary font-medium italic">Strawberry Chiffon Cake</p>
+          <div class="flex items-center gap-4 mt-4">
+            <p class="text-3xl font-bold">450.000 VNĐ</p>
+            <div class="flex items-center text-yellow-400"><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined">star_half</span><span class="ml-2 text-slate-500 text-sm">(48 đánh giá)</span></div>
+          </div>
+        </div>
+        <!-- Mobile stats bar -->
+        <div class="md:hidden flex items-center gap-4 mt-4 py-3 border-y border-primary/20">
+          <div class="flex items-center gap-1"><span class="material-symbols-outlined text-yellow-500 text-[18px] fill-1">star</span><span class="font-bold text-sm">4.9</span><span class="text-slate-400 text-xs">(120+)</span></div>
+          <div class="h-4 w-[1px] bg-slate-200"></div>
+          <div class="flex items-center gap-1"><span class="material-symbols-outlined text-pink-500 text-[18px]">schedule</span><span class="text-sm font-medium">30-45 phút</span></div>
+        </div>
+        <p class="hidden md:block mt-6 text-slate-600 leading-relaxed">Mềm mịn, tan ngay trong miệng với hương vị dâu tây tự nhiên và kem tươi vani Tahitian cao cấp. Lựa chọn hoàn hảo cho những dịp kỷ niệm nhẹ nhàng.</p>
+      </div>
+
+      <!-- Size selector -->
+      <div class="border-t border-primary/20 pt-6">
+        <div class="flex justify-between items-center mb-3"><label class="text-sm font-semibold">Kích Thước</label><span class="md:hidden text-xs text-pink-500 font-medium">Bắt buộc</span></div>
+        <div class="grid grid-cols-3 gap-3">
+          <button class="flex flex-col items-center justify-center p-3 rounded-xl border-2 border-primary bg-primary/10"><span class="text-xs font-bold">15cm</span><span class="text-[10px] opacity-70">Nhỏ (4-6)</span></button>
+          <button class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-200 hover:border-primary"><span class="text-xs font-bold">20cm</span><span class="text-[10px] opacity-70">Vừa (8-10)</span></button>
+          <button class="flex flex-col items-center justify-center p-3 rounded-xl border border-slate-200 hover:border-primary"><span class="text-xs font-bold">25cm</span><span class="text-[10px] opacity-70">Lớn (12+)</span></button>
+        </div>
+      </div>
+
+      <!-- Flavor selector -->
+      <div>
+        <label class="block text-sm font-semibold mb-3">Cốt bánh</label>
+        <div class="flex flex-wrap gap-3">
+          <button class="px-4 md:px-5 py-2 md:py-2.5 rounded-full md:rounded-lg border-2 border-primary bg-primary/10 text-sm font-semibold">Vani</button>
+          <button class="px-4 md:px-5 py-2 md:py-2.5 rounded-full md:rounded-lg border border-slate-200 hover:border-primary text-sm">Sô-cô-la</button>
+          <button class="px-4 md:px-5 py-2 md:py-2.5 rounded-full md:rounded-lg border border-slate-200 hover:border-primary text-sm">Trà xanh</button>
+          <button class="px-4 md:px-5 py-2 md:py-2.5 rounded-full md:rounded-lg border border-slate-200 hover:border-primary text-sm">Nhung đỏ</button>
+        </div>
+      </div>
+
+      <!-- Description (mobile) -->
+      <div class="md:hidden bg-primary/5 rounded-xl p-4">
+        <h3 class="font-bold mb-2">Mô tả sản phẩm</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">Bánh kem dâu tây tươi mát với lớp kem whipping cao cấp, cốt bánh bông lan mềm mịn và dâu tây Đà Lạt được tuyển chọn kỹ lưỡng.</p>
+      </div>
+
+      <!-- Message + Date -->
+      <div>
+        <label class="block text-sm font-semibold mb-3">Lời nhắn trên bánh</label>
+        <input class="w-full px-4 py-3 rounded-xl bg-slate-100 border-none focus:ring-2 focus:ring-primary" placeholder="Vd: Chúc mừng sinh nhật (Tối đa 20 ký tự)" type="text"/>
+      </div>
+      <div class="hidden md:grid grid-cols-2 gap-4">
+        <div><label class="block text-sm font-semibold mb-3">Ngày nhận bánh</label><input class="w-full px-4 py-3 rounded-xl bg-slate-100 border-none focus:ring-2 focus:ring-primary" type="date"/></div>
+        <div><label class="block text-sm font-semibold mb-3">Số lượng</label><div class="flex items-center bg-slate-100 rounded-xl px-2"><button class="p-2 text-primary"><span class="material-symbols-outlined">remove</span></button><input class="w-full bg-transparent border-none text-center focus:ring-0" type="number" value="1"/><button class="p-2 text-primary"><span class="material-symbols-outlined">add</span></button></div></div>
+      </div>
+
+      <!-- Desktop action buttons -->
+      <div class="hidden md:block space-y-3 pt-4">
+        <div class="grid grid-cols-2 gap-4">
+          <button class="flex items-center justify-center gap-2 py-4 bg-primary text-slate-900 font-bold rounded-xl hover:opacity-90"><span class="material-symbols-outlined">shopping_bag</span> Thêm vào giỏ</button>
+          <a href="checkout.html" class="flex items-center justify-center gap-2 py-4 bg-slate-900 text-white font-bold rounded-xl hover:opacity-90">Đặt hàng ngay</a>
+        </div>
+        <button class="w-full flex items-center justify-center gap-2 py-4 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary/5"><span class="material-symbols-outlined">chat</span> Chat để đặt hàng (Zalo/Messenger)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detail Tabs (desktop) -->
+  <section class="hidden md:block mt-20 border-t border-primary/20 pt-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div class="space-y-4"><h3 class="text-xl font-bold flex items-center gap-2"><span class="material-symbols-outlined text-primary">restaurant</span> Thành phần</h3><p class="text-sm text-slate-600 leading-loose">Bột mì Nhật cao cấp, dâu tây hữu cơ tươi sạch, trứng gà trang trại, hạt vani Tahitian, kem tươi nguyên chất, đường hữu cơ tối giản.</p></div>
+      <div class="space-y-4"><h3 class="text-xl font-bold flex items-center gap-2"><span class="material-symbols-outlined text-primary">local_shipping</span> Giao hàng</h3><p class="text-sm text-slate-600 leading-loose">Giao hàng nội thành TP.HCM (Quận 1, 2, 3, 7). Đặt trước 24h để đảm bảo độ tươi mới nhất.</p></div>
+      <div class="space-y-4"><h3 class="text-xl font-bold flex items-center gap-2"><span class="material-symbols-outlined text-primary">straighten</span> Hướng dẫn chọn size</h3><p class="text-sm text-slate-600 leading-loose">16cm: Tiệc nhỏ thân mật.<br/>20cm: Họp mặt gia đình.<br/>24cm: Tiệc văn phòng hoặc sự kiện.</p></div>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  <section class="mt-12 md:mt-24">
+    <h3 class="text-xl md:text-2xl font-bold mb-6 md:mb-8">Bánh tương tự</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      <a href="cake-detail.html" class="group cursor-pointer block"><div class="aspect-square rounded-xl overflow-hidden mb-3 md:mb-4 relative"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Chocolate Mousse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6hVa8kpr39fKb3kgUQH0O0WR6szPo2FCLeSM3NyaB7xBM4uecAGXxComz5yFbklC4JyhD7qfNNORzZ6Hk8B8dwMCIiSOnqXmUsfOg2m9W30pL8DZI8b9WG1ux0iq-iO4siy9YUsOuTcqh4K1yHqry82ZKYopUsAWoyTf6QeRSS6U8yRabWCXsoFJyMZC0SnGU4gZV-oFYBLMTBuTlWmWi7SCKB9ZRcRtj_4q-BSpqxOHixTQkPXVX7xUCBHdoQWL9VkGjT1P-opKv"/><div class="absolute bottom-2 right-2 bg-white/90 px-2 py-1 rounded text-xs font-bold">480k</div></div><h4 class="font-bold text-sm">Chocolate Mousse</h4><p class="text-xs text-slate-500">Mousse Socola Đậm Đà</p></a>
+      <a href="cake-detail.html" class="group cursor-pointer block"><div class="aspect-square rounded-xl overflow-hidden mb-3 md:mb-4 relative"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Matcha Uji" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwlUisDXXzASHT5gqk3os-h6F-kkeNHB53b8-HKCupVEvxEVlPmijXkYfP9jbd0w0LJQmo_CQRP3r-7L7-nvBdxtOGJlQQZTE3MGgod9K6TzVoUhzklekwvuCGl00C663FI1Ad2O8d6eY6E7wAX0qZ8HM_PdD6SekWQyPAJMExvgYXBLsGJfbcceMCCidPNu0PT7dZ1QBMoUW69_j1qq5l31UcNBohAMu92DaUQtqTIs4tQDoE79a1hjIstS4vOqsxxRgpNqObuam_"/><div class="absolute bottom-2 right-2 bg-white/90 px-2 py-1 rounded text-xs font-bold">450k</div></div><h4 class="font-bold text-sm">Matcha Uji Cake</h4><p class="text-xs text-slate-500">Bánh Matcha Nhật Bản</p></a>
+      <a href="cake-detail.html" class="group cursor-pointer block"><div class="aspect-square rounded-xl overflow-hidden mb-3 md:mb-4 relative"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Mango Passion Tart" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeRjSmwmw3z0pqB8Y2HfZ-C0yTpv-XxOTDU-GmkuAHr7qvosi7Kd73hWMBM1S2gkBWxI1qWASJ0nzK5XThYhXQBbbi_QmQrV1tEZomNc_VkxXgfJ8tW-JEKkiXe-6kKCutuEgYF7HinVhbYYj3WPD2hjza7IA_0kc4N5XvQg8s7rFJkPw8s3bI_nySHHp4iT8jfMUYWS8MluOhWIPP6gsWYJkYj8nUTI6azu8L1CzXC5jQov8diqQ9UV9BHii5BhdMXadNn0UkEufs"/><div class="absolute bottom-2 right-2 bg-white/90 px-2 py-1 rounded text-xs font-bold">420k</div></div><h4 class="font-bold text-sm">Mango Passion Tart</h4><p class="text-xs text-slate-500">Tart Xoài Chanh Dây</p></a>
+      <a href="cake-detail.html" class="group cursor-pointer block"><div class="aspect-square rounded-xl overflow-hidden mb-3 md:mb-4 relative"><img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Classic Tiramisu" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-HMUTC93AGZ5SEDExrIwiSk46tHwPR_OOdSrgM1bdNZOjKj5WAa1ve5SvtTKw-icvtG9Ho_6WWa7IzdfSFnnvMluZiduueyG7lQ9R5ENx2GjyyFbT2hpO5nJt1LKBgkf8ELvSdE6-mxSxT0btsdC-HzGO3_ysmTeFd16PuxDOFkfzth2FxVT4pm8pbdCfgKOEpYJ2awIJMUMjNIYE9QwNurO_eW0TiLnKEX7t4NM8KKGBvaANP2VgvRxAQ3H2bPlKbXpB1l67PUpt"/><div class="absolute bottom-2 right-2 bg-white/90 px-2 py-1 rounded text-xs font-bold">490k</div></div><h4 class="font-bold text-sm">Classic Tiramisu</h4><p class="text-xs text-slate-500">Tiramisu Truyền Thống</p></a>
+    </div>
+  </section>
+
+  <!-- Reviews (desktop) -->
+  <section class="hidden md:block mt-24 mb-20 bg-primary/5 rounded-3xl p-8 md:p-12">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
+      <div><h3 class="text-3xl font-bold">Khách hàng nói gì</h3><p class="text-slate-500">Dựa trên 48 đơn hàng đã xác thực</p></div>
+      <button class="px-8 py-3 bg-white border-2 border-primary rounded-xl font-bold hover:bg-primary/20">Viết đánh giá</button>
+    </div>
+    <div class="space-y-8">
+      <div class="flex gap-4 p-6 bg-white rounded-2xl shadow-sm"><div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">AN</div><div class="flex-1"><div class="flex items-center justify-between mb-2"><h5 class="font-bold">An Nguyễn</h5><span class="text-xs text-slate-400">2 ngày trước</span></div><div class="flex text-yellow-400 mb-2"><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span></div><p class="text-sm text-slate-600">Bánh rất xốp mịn và không quá ngọt. Rất hợp cho dịp sinh nhật mẹ mình!</p></div></div>
+      <div class="flex gap-4 p-6 bg-white rounded-2xl shadow-sm"><div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">BT</div><div class="flex-1"><div class="flex items-center justify-between mb-2"><h5 class="font-bold">Bảo Trân</h5><span class="text-xs text-slate-400">1 tuần trước</span></div><div class="flex text-yellow-400 mb-2"><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm">star</span></div><p class="text-sm text-slate-600">Đóng gói rất đẹp và giao hàng nhanh. Vị dâu tây rất tươi và thơm.</p></div></div>
+    </div>
+  </section>
+</main>
+
+<!-- COMPONENT: Footer (desktop) -->
+<footer class="hidden md:block bg-slate-900 text-slate-300 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+    <div><div class="flex items-center gap-2 mb-6 text-white"><span class="material-symbols-outlined text-primary text-3xl">cake</span><h2 class="text-xl font-bold tracking-tight">Nhu Cake</h2></div><p class="text-sm leading-relaxed mb-6">Được làm thủ công bằng tất cả tình yêu tại Sài Gòn.</p></div>
+    <div><h4 class="text-white font-bold mb-6">Liên kết</h4><ul class="space-y-4 text-sm"><li><a class="hover:text-primary" href="cake-listing.html">Tất cả loại bánh</a></li><li><a class="hover:text-primary" href="index.html">Trang chủ</a></li></ul></div>
+    <div><h4 class="text-white font-bold mb-6">Liên hệ</h4><ul class="space-y-4 text-sm"><li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm">location_on</span><span>123 Nguyễn Huệ, Q1, TP.HCM</span></li><li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-sm">call</span><span>+84 901 234 567</span></li></ul></div>
+    <div><h4 class="text-white font-bold mb-6">Bản tin</h4><p class="text-sm mb-4">Nhận ưu đãi 10% cho đơn đầu tiên!</p><div class="flex overflow-hidden rounded-lg"><input class="w-full bg-slate-800 border-none px-4 text-sm focus:ring-0" placeholder="Email" type="email"/><button class="bg-primary text-slate-900 px-4 py-2 font-bold text-sm">Tham gia</button></div></div>
+  </div>
+  <div class="border-t border-slate-800 mt-16 pt-8 text-center text-xs">© 2024 Nhu Cake. Mọi quyền được bảo lưu.</div>
+</div>
+</footer>
+
+<!-- Mobile sticky bottom bar -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-slate-100 p-4 pb-8">
+<div class="flex gap-3 items-center max-w-lg mx-auto">
+  <div class="flex items-center bg-slate-100 rounded-lg h-12 px-2 gap-3">
+    <button class="size-8 flex items-center justify-center text-slate-400"><span class="material-symbols-outlined text-[20px]">remove</span></button>
+    <span class="font-bold text-sm w-4 text-center">1</span>
+    <button class="size-8 flex items-center justify-center text-pink-500"><span class="material-symbols-outlined text-[20px]">add</span></button>
+  </div>
+  <a href="checkout.html" class="flex-1 flex items-center justify-center gap-2 bg-primary text-slate-900 h-12 rounded-lg font-bold shadow-lg shadow-primary/20"><span class="material-symbols-outlined text-[20px]">shopping_basket</span><span>Đặt ngay</span></a>
+</div>
+</div>
+</body>
+</html>
