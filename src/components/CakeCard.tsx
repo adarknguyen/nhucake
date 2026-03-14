@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import { formatPrice } from '../data/cakes'
+import { Cake } from '../types'
 
 // CakeCard Component - Individual cake product card
-function CakeCard({ cake, showDescription = true }) {
+interface CakeCardProps {
+  cake: Cake
+  showDescription?: boolean
+}
+
+function CakeCard({ cake, showDescription = true }: CakeCardProps) {
   return (
     <Link
       to={`/cake/${cake.slug}`}

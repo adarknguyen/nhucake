@@ -1,7 +1,9 @@
 // Mock data for cake products
 // This file contains all cake product information used across the app
 
-export const cakes = [
+import { Cake, ContactInfo, Category } from '../types';
+
+export const cakes: Cake[] = [
   {
     id: 1,
     slug: "dau-tay-kem-tuoi",
@@ -154,19 +156,19 @@ export const cakes = [
 ];
 
 // Helper function to get cake by slug
-export const getCakeBySlug = (slug) => {
+export const getCakeBySlug = (slug: string): Cake | undefined => {
   return cakes.find(cake => cake.slug === slug);
 };
 
 // Helper function to get related cakes (excluding current)
-export const getRelatedCakes = (currentSlug, limit = 4) => {
+export const getRelatedCakes = (currentSlug: string, limit: number = 4): Cake[] => {
   return cakes
     .filter(cake => cake.slug !== currentSlug)
     .slice(0, limit);
 };
 
 // Helper function to format price
-export const formatPrice = (price) => {
+export const formatPrice = (price: number): string => {
   return new Intl.NumberFormat('vi-VN', {
     style: 'currency',
     currency: 'VND'
@@ -174,7 +176,7 @@ export const formatPrice = (price) => {
 };
 
 // Contact information
-export const contactInfo = {
+export const contactInfo: ContactInfo = {
   address: "123 Đường Nguyễn Huệ, Quận 1, TP.HCM",
   phone: "+84 123 456 789",
   email: "hello@nhucake.com",
@@ -187,7 +189,7 @@ export const contactInfo = {
 };
 
 // Categories for filtering
-export const categories = [
+export const categories: Category[] = [
   { id: "all", name: "Tất cả", icon: "cake" },
   { id: "best-seller", name: "Sinh Nhật", icon: "celebration" },
   { id: "signature", name: "Signature", icon: "edit_square" },

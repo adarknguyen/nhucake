@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { NavLink } from '../types'
 
 // Header Component - Navigation bar for desktop and mobile
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const location = useLocation()
 
-  const isActive = (path) => location.pathname === path
+  const isActive = (path: string) => location.pathname === path
 
-  const navLinks = [
+  const navLinks: NavLink[] = [
     { path: '/', label: 'Trang chủ' },
     { path: '/cakes', label: 'Bánh kem' },
     { path: '/checkout', label: 'Đặt bánh' },

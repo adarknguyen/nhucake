@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { formatPrice, cakes } from '../data/cakes'
 
 // Checkout Page - Order form and cart summary

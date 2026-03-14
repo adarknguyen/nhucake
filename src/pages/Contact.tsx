@@ -164,7 +164,7 @@ function Contact() {
                 <textarea
                   className="rounded-lg border-slate-200 bg-background-light focus:border-primary focus:ring-primary p-3"
                   placeholder="Chúng tôi có thể giúp gì cho bạn?"
-                  rows="3"
+                  rows={3}
                 />
               </div>
               <button

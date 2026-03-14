@@ -5,8 +5,8 @@ import CakeCard from '../components/CakeCard'
 
 // CakeDetail Page - Individual product detail page
 function CakeDetail() {
-  const { slug } = useParams()
-  const cake = getCakeBySlug(slug)
+  const { slug } = useParams<{ slug: string }>()
+  const cake = getCakeBySlug(slug || '')
 
   const [selectedSize, setSelectedSize] = useState(cake?.sizes?.[0]?.size || '15cm')
   const [selectedFlavor, setSelectedFlavor] = useState(cake?.flavors?.[0] || 'Vani')
@@ -22,7 +22,7 @@ function CakeDetail() {
     )
   }
 
-  const relatedCakes = getRelatedCakes(slug, 4)
+  const relatedCakes = getRelatedCakes(slug || '', 4)
   const currentSizeData = cake.sizes?.find(s => s.size === selectedSize) || { size: selectedSize, price: cake.price }
   const totalPrice = currentSizeData.price * quantity
 

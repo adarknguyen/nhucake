@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import CakeGrid from '../components/CakeGrid'
-import { cakes, formatPrice } from '../data/cakes'
+import { cakes } from '../data/cakes'
 
 // Home Page - Main landing page
 function Home() {
@@ -193,7 +193,7 @@ function Home() {
               <textarea
                 className="w-full bg-white border-primary/20 rounded-lg px-4 py-3 text-sm focus:ring-accent-pink focus:border-accent-pink"
                 placeholder="Hãy kể cho chúng tôi ý tưởng của bạn..."
-                rows="3"
+                rows={3}
               />
               <button className="w-full bg-accent-pink text-white py-3 rounded-lg font-bold shadow-md">
                 Nhận Báo Giá

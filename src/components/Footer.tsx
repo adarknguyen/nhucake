@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { contactInfo } from '../data/cakes'
 
 // Footer Component - Site footer with links and contact info
 function Footer() {

@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 function MobileBottomNav() {
   const location = useLocation()
 
-  const isActive = (path) => location.pathname === path
+  const isActive = (path: string) => location.pathname === path
 
   const navItems = [
     { path: '/', label: 'Trang chủ', icon: 'home', iconType: 'fill' },
