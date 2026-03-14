@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { formatPrice } from '../data/cakes'
 import { Cake } from '../types'
 
@@ -11,7 +11,7 @@ interface CakeCardProps {
 function CakeCard({ cake, showDescription = true }: CakeCardProps) {
   return (
     <Link
-      to={`/cake/${cake.slug}`}
+      href={`/cakes/${cake.slug}`}
       className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-primary/10 block"
     >
       <div className="aspect-square md:h-64 md:aspect-auto relative overflow-hidden group">
